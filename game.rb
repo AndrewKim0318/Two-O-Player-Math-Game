@@ -17,10 +17,22 @@ class Game
   end
 
   def change_answering_player
-    if answering_player == player1
-      self.answering_player = player2
+    if self.answering_player == self.player1
+      self.answering_player = self.player2
     else
-      self.answering_player = player1
+      self.answering_player = self.player1
+    end
+  end
+
+  def check_answer?
+    @answer = self.number1 + self.number2
+  end
+  
+  def generate_response
+    if check_answer
+      return "#{self.answering_player}: Seriously? No!"
+    else
+      return "#{self.answering_player}: YES! You are correct."
     end
   end
 end
