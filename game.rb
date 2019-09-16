@@ -1,10 +1,12 @@
 class Game
-  attr_accessor :answering_player
+  attr_accessor :answering_player, :player1_score, :player2_score
   attr_reader :player1, :player2, :number1, :number2
   def initialize(answering_player, player1, player2)
     @answering_player = answering_player
     @player1 = player1
+    @player1_score = 3
     @player2 = player2
+    @player2_score = 3
   end
 
   def random_number_generators
@@ -41,4 +43,6 @@ class Game
       return "#{self.answering_player}: YES! You are correct."
     end
   end
+
+
 end
