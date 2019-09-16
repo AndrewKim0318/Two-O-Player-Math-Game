@@ -10,8 +10,8 @@ puts robert.name
 game = Game.new(andrew, andrew, robert)
 
 game.random_number_generators
-puts game.check_answer
 puts game.generate_question
+puts game.check_answer?
 
 puts game.answering_player
 game.change_answering_player

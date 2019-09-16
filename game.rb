@@ -26,6 +26,12 @@ class Game
 
   def check_answer?
     @answer = self.number1 + self.number2
+    user_response = gets.chomp.to_i
+    if user_response == @answer
+      return true
+    else
+      return false
+    end
   end
   
   def generate_response
