@@ -5,4 +5,9 @@ class Player
     @name = name
     @score = 3
   end
+
+  def to_s
+    self.name
+  end
+
 end

@@ -1,8 +1,14 @@
 require "./game"
 require "./player"
 
-player1 = Player.new("Andrew")
-player2 = Player.new("Robert")
+andrew = Player.new("Andrew")
+robert = Player.new("Robert")
 
-puts player1.name
-puts player2.name
+puts andrew.name
+puts robert.name
+
+game = Game.new(andrew, andrew, robert)
+
+puts game.answering_player
+puts game.player1
+puts game.player2
