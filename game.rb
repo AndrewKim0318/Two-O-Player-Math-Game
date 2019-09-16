@@ -37,12 +37,24 @@ class Game
   end
   
   def generate_response
-    if check_answer
-      return "#{self.answering_player}: Seriously? No!"
-    else
+    if check_answer?
       return "#{self.answering_player}: YES! You are correct."
+    else
+      if self.answering_player == self.player1
+        puts player1_score
+        self.player1_score -=1
+        puts player1_score
+        return "#{self.answering_player}: Seriously? No!"
+      else
+        puts player2_score
+        self.player2_score -=1
+        puts player2_score
+        return "#{self.answering_player}: Seriously? No!"
+      end
     end
   end
 
+  def change_player_score
+  end
 
 end
