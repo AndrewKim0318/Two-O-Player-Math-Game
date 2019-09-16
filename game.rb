@@ -15,7 +15,7 @@ class Game
   end
 
   def generate_question
-    "#{self.answering_player}: What does #{self.number1} plus #{self.number2} equal?"
+    puts "#{self.answering_player}: What does #{self.number1} plus #{self.number2} equal?"
   end
 
   def change_answering_player
@@ -56,9 +56,15 @@ class Game
 
   def end_game
     if player1_score == 0
-      "#{player2} wins with a score of #{player2_score}/3"
+      puts "#{player2} wins with a score of #{player2_score}/3"
+      puts "----- GAME OVER -----"
+      puts "Good bye!"
     elsif player2_score ==0
       "#{player1} wins with a score of #{player1_score}/3"
+      puts "----- GAME OVER -----"
+      puts "Good bye!"
+    else
+      puts "----- NEW TURN -----"
     end
   end
 
