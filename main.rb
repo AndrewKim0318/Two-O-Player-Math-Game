@@ -11,13 +11,12 @@ game = Game.new(andrew, andrew, robert)
 
 game.random_number_generators
 puts game.generate_question
-puts game.generate_response
-game.change_player_score
+game.generate_response
 
 # puts game.answering_player
 game.change_answering_player
 game.random_number_generators
 puts game.generate_question
 puts game.generate_response
-game.change_player_score
+
 # puts game.answering_player

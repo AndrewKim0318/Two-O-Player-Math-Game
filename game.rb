@@ -37,24 +37,29 @@ class Game
   end
   
   def generate_response
+    message = "#{self.player1}: #{self.player1_score}/3 vs #{self.player2}: #{self.player2_score}/3"
     if check_answer?
-      return "#{self.answering_player}: YES! You are correct."
+      puts "#{self.answering_player}: YES! You are correct."
+      puts "#{self.player1}: #{self.player1_score}/3 vs #{self.player2}: #{self.player2_score}/3"
     else
       if self.answering_player == self.player1
-        puts player1_score
         self.player1_score -=1
-        puts player1_score
-        return "#{self.answering_player}: Seriously? No!"
+        puts "#{self.answering_player}: Seriously? No!"
+        puts "#{self.player1}: #{self.player1_score}/3 vs #{self.player2}: #{self.player2_score}/3"
       else
-        puts player2_score
         self.player2_score -=1
-        puts player2_score
-        return "#{self.answering_player}: Seriously? No!"
+        puts "#{self.answering_player}: Seriously? No!"
+        puts "#{self.player1}: #{self.player1_score}/3 vs #{self.player2}: #{self.player2_score}/3"
       end
     end
   end
 
-  def change_player_score
+  def end_game
+    if player1_score == 0
+      "#{player2} wins with a score of #{player2_score}/3"
+    elsif player2_score ==0
+      "#{player1} wins with a score of #{player1_score}/3"
+    end
   end
 
 end
