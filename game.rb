@@ -15,4 +15,12 @@ class Game
   def generate_question
     "#{self.answering_player}: What does #{self.number1} plus #{self.number2} equal?"
   end
+
+  def change_answering_player
+    if answering_player == player1
+      self.answering_player = player2
+    else
+      self.answering_player = player1
+    end
+  end
 end
