@@ -9,6 +9,5 @@ puts robert.name
 
 game = Game.new(andrew, andrew, robert)
 
-puts game.answering_player
-puts game.player1
-puts game.player2
+game.random_number_generators
+puts game.generate_question
